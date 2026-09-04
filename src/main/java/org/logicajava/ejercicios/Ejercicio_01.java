@@ -11,4 +11,21 @@ package org.logicajava.ejercicios;
  * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
  */
 public class Ejercicio_01 {
+    public static void main(String[] args) {
+
+        String condicion = "";
+        for (int i = 1; i <= 100; i++) {
+
+            if (i % 3 == 0 && i % 5 == 0) {
+                condicion = "fizzbuzz";
+            } else if (i % 5 == 0) {
+                condicion = "buzz";
+            } else if (i % 3 == 0) {
+                condicion = "fizz";
+            } else {
+                condicion = "";
+            }
+            System.out.println("Numero = " + i + " " + condicion);
+        }
+    }
 }
