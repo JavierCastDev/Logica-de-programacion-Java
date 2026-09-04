@@ -10,22 +10,22 @@ package org.logicajava.ejercicios;
  * - Múltiplos de 5 por la palabra "buzz".
  * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
  */
-public class Ejercicio_01 {
+public class Ejercicio01 {
     public static void main(String[] args) {
 
-        String condicion = "";
+        String j = "";
         for (int i = 1; i <= 100; i++) {
 
             if (i % 3 == 0 && i % 5 == 0) {
-                condicion = "fizzbuzz";
+                j = "fizzbuzz";
             } else if (i % 5 == 0) {
-                condicion = "buzz";
+                j = "buzz";
             } else if (i % 3 == 0) {
-                condicion = "fizz";
+                j = "fizz";
             } else {
-                condicion = "";
+                j = String.valueOf(i);
             }
-            System.out.println("Numero = " + i + " " + condicion);
+            System.out.println("Numero = " + j);
         }
     }
 }
