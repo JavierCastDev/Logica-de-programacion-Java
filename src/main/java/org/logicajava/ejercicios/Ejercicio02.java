@@ -15,15 +15,15 @@ public class Ejercicio02 {
 
     public static void main(String[] args) {
         Ejercicio02 ej = new Ejercicio02();
-        ej.anagrama("nader", "RedAN");
+        ej.anagrama("CaPi", "PiCa");
     }
 
     public void anagrama(String palabraUno, String palabraDos) {
-        String palabraUnoRevertida = new StringBuilder(palabraUno).reverse().toString().toUpperCase();
-        String palabraDosTratada = palabraDos.toUpperCase();
+        String palabraUnoOrdenada = palabraUno.toUpperCase().chars().sorted().collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
+        String palabraDosTratada = palabraDos.toUpperCase().chars().sorted().collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
         boolean resultado = false;
 
-        if (palabraUnoRevertida.equals(palabraDosTratada)) {
+        if (palabraUnoOrdenada.equals(palabraDosTratada)) {
             resultado = true;
             System.out.println(resultado);
         } else {
